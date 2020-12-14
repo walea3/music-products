@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import { ProductListingPage } from 'features/listing';
+
 function App() {
   return (
     <Router>
@@ -8,7 +10,7 @@ function App() {
           <div>Product detail</div>
         </Route>
         <Route path="/">
-          <div>Products listing</div>
+          <ProductListingPage />
         </Route>
       </Switch>
     </Router>
