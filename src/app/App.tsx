@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { ProductListingPage } from 'features/listing';
+import { ProductDetailPage } from 'features/detail';
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/product-:productId">
-          <div>Product detail</div>
+          <ProductDetailPage />
         </Route>
         <Route path="/">
           <ProductListingPage />
