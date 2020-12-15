@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductDetailPage /> @renders when loading 1`] = `
+<DocumentFragment>
+  <div>
+    Loading product ...
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProductDetailPage /> @renders with no product 1`] = `
+<DocumentFragment>
+  <div>
+    There was a problem finding product (123).
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProductDetailPage /> @renders with product 1`] = `
+<DocumentFragment>
+  .c2 {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-top: 5px solid;
+  border-color: #00b6b8;
+  overflow: hidden;
+  width: 90%;
+  max-width: 490px;
+  color: #08070b;
+}
+
+.c0:hover .c1 {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.c3 {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background-color: #F2F2F2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.c4 {
+  margin-top: 0;
+}
+
+.c5 {
+  display: inline-block;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #00b6b8;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+<article
+    class="c0"
+    data-testid="Product-123"
+  >
+    <img
+      alt="Artist name"
+      class="c1 c2"
+      data-testid="Product-123-image"
+      src="path/to/image1.jpg"
+    />
+    <div
+      class="c3"
+    >
+      <h2
+        class="c4"
+        data-testid="Product-123-title"
+      >
+        Product title
+      </h2>
+      <p>
+        Product description
+      </p>
+      <div
+        class="c5"
+        data-testid="Product-123-price"
+      >
+        Free
+      </div>
+    </div>
+  </article>
+</DocumentFragment>
+`;
