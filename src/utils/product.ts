@@ -12,3 +12,6 @@ export type Product = {
   feature_order: string;
   price?: string;
 };
+
+export const BASE_PRICE = 12.99;
+export const DEFAULT_BG_COLOR = '#424242';

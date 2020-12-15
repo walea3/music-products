@@ -1,4 +1,11 @@
-import { Product, useAPI } from 'utils';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+import { Product, useAPI, testIdProp } from 'utils';
+
+import { ProductItem } from './components/ProductItem';
+
+export const getProductUrl = ({ id }: Product) => `/product-${id}`;
 
 export function ProductListingPage() {
   const [isLoading, products = [], error, fetchProducts] = useAPI<Product[]>(
@@ -21,22 +28,28 @@ export function ProductListingPage() {
       {products.length < 1 ? (
         <div>No products, yet.</div>
       ) : (
-        <ul>
-          {products.map(({ artist, ...product }) => (
-            <article>
-              <header>
-                <h2>{product.title}</h2>
-                <div>{product.description}</div>
-                <div>
-                  {product.isFree ? 'Free' : <>&pound;{product.price}</>}
-                </div>
-                <img src={product.image1} alt={artist} />
-                <img src={product.image2} alt={artist} />
-              </header>
-            </article>
+        <ProductList>
+          {products.map((product) => (
+            <ProductListItem key={product.id}>
+              <Link to={getProductUrl(product)}>
+                <ProductItem {...product} />
+              </Link>
+            </ProductListItem>
           ))}
-        </ul>
+        </ProductList>
       )}
     </div>
   );
 }
+
+const ProductList = styled.ul`
+  text-align: center;
+  list-style: none;
+  margin: 0 auto;
+`;
+
+const ProductListItem = styled.li`
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+`;

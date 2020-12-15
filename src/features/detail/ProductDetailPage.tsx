@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 
+import { ProductItem } from 'features/listing/components/ProductItem';
 import { Product, useAPI } from 'utils';
 
 type ProductParams = { productId: string };
@@ -9,20 +10,13 @@ export function ProductDetailPage() {
 
   const [isLoading, product] = useAPI<Product>(`products/${productId}`);
 
-  return isLoading ? (
-    <div>Loading product ...</div>
-  ) : (
-    <div>
-      {!product ? (
-        <div>There was a problem finding product ({productId}).</div>
-      ) : (
-        <>
-          <h1>{product.title}</h1>
-          <img src={product.image1} alt={product.artist} />
-          <div>{product.description}</div>
-          <div>{product.isFree ? 'Free' : <>&pound;{product.price}</>}</div>
-        </>
-      )}
-    </div>
+  if (isLoading) return <div>Loading product ...</div>;
+  if (!product)
+    return <div>There was a problem finding product ({productId}).</div>;
+
+  return (
+    <ProductItem {...product}>
+      <p>{product.description}</p>
+    </ProductItem>
   );
 }
