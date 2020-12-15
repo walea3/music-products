@@ -50,7 +50,7 @@ describe('<ProductListingPage />', () => {
       ]);
 
       const wrapper = renderWithRouter(<ProductListingPage />);
-      expect(wrapper.asFragment()).toMatchSnapshot();
+      expect(findByTestId(wrapper, 'list')).toMatchSnapshot();
     });
 
     test('with multiple ordered products', () => {
@@ -66,7 +66,8 @@ describe('<ProductListingPage />', () => {
       ]);
 
       const wrapper = renderWithRouter(<ProductListingPage />);
-      expect(wrapper.asFragment()).toMatchSnapshot();
+      expect(findByTestId(wrapper, 'list')).toMatchSnapshot();
+      expect(findByTestId(wrapper, 'carousel')).toMatchSnapshot('carousel');
     });
 
     test('with error', () => {

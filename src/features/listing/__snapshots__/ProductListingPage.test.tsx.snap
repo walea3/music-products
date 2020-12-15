@@ -17,8 +17,7 @@ exports[`<ProductListingPage /> @renders when loading 1`] = `
 `;
 
 exports[`<ProductListingPage /> @renders with a single product 1`] = `
-<DocumentFragment>
-  .c4 {
+.c5 {
   display: block;
   width: 100%;
   height: auto;
@@ -28,7 +27,7 @@ exports[`<ProductListingPage /> @renders with a single product 1`] = `
   transition: transform 0.5s ease-in-out;
 }
 
-.c2 {
+.c3 {
   position: relative;
   display: inline-block;
   -webkit-flex-direction: column;
@@ -42,13 +41,13 @@ exports[`<ProductListingPage /> @renders with a single product 1`] = `
   color: #08070b;
 }
 
-.c2:hover .c3 {
+.c3:hover .c4 {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.c5 {
+.c6 {
   position: relative;
   z-index: 1;
   padding: 20px;
@@ -57,11 +56,11 @@ exports[`<ProductListingPage /> @renders with a single product 1`] = `
   border-bottom-right-radius: 10px;
 }
 
-.c6 {
+.c7 {
   margin-top: 0;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   right: 10px;
   padding: 5px 10px;
@@ -74,7 +73,7 @@ exports[`<ProductListingPage /> @renders with a single product 1`] = `
 .c0 {
   text-align: center;
   list-style: none;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .c1 {
@@ -83,51 +82,52 @@ exports[`<ProductListingPage /> @renders with a single product 1`] = `
   vertical-align: top;
 }
 
-<div>
-    <h1>
-      Products
-    </h1>
-    <ul
-      class="c0"
+.c2 {
+  display: inline-block;
+  text-align: center;
+}
+
+<ul
+  class="c0"
+  data-testid="Products-list"
+>
+  <li
+    class="c1"
+  >
+    <a
+      class="c2"
+      href="/product-123"
     >
-      <li
-        class="c1"
+      <article
+        class="c3"
+        data-testid="Product-123"
       >
-        <a
-          href="/product-123"
+        <img
+          alt="Artist name"
+          class="c4 c5"
+          data-testid="Product-123-image"
+          src="path/to/image1.jpg"
+        />
+        <div
+          class="c6"
         >
-          <article
-            class="c2"
-            data-testid="Product-123"
+          <h2
+            class="c7"
+            data-testid="Product-123-title"
           >
-            <img
-              alt="Artist name"
-              class="c3 c4"
-              data-testid="Product-123-image"
-              src="path/to/image1.jpg"
-            />
-            <div
-              class="c5"
-            >
-              <h2
-                class="c6"
-                data-testid="Product-123-title"
-              >
-                Product title
-              </h2>
-              <div
-                class="c7"
-                data-testid="Product-123-price"
-              >
-                Free
-              </div>
-            </div>
-          </article>
-        </a>
-      </li>
-    </ul>
-  </div>
-</DocumentFragment>
+            Product title
+          </h2>
+          <div
+            class="c8"
+            data-testid="Product-123-price"
+          >
+            Free
+          </div>
+        </div>
+      </article>
+    </a>
+  </li>
+</ul>
 `;
 
 exports[`<ProductListingPage /> @renders with error 1`] = `
@@ -150,8 +150,193 @@ exports[`<ProductListingPage /> @renders with error 1`] = `
 `;
 
 exports[`<ProductListingPage /> @renders with multiple ordered products 1`] = `
-<DocumentFragment>
-  .c4 {
+.c5 {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+.c3 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-top: 5px solid;
+  border-color: #00b6b8;
+  overflow: hidden;
+  width: 90%;
+  max-width: 490px;
+  color: #08070b;
+}
+
+.c3:hover .c4 {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.c6 {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background-color: #F2F2F2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.c7 {
+  margin-top: 0;
+}
+
+.c8 {
+  display: inline-block;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #00b6b8;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.c0 {
+  text-align: center;
+  list-style: none;
+  margin: 20px auto;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+}
+
+.c2 {
+  display: inline-block;
+  text-align: center;
+}
+
+<ul
+  class="c0"
+  data-testid="Products-list"
+>
+  <li
+    class="c1"
+  >
+    <a
+      class="c2"
+      href="/product-777"
+    >
+      <article
+        class="c3"
+        data-testid="Product-777"
+      >
+        <img
+          alt="Artist name"
+          class="c4 c5"
+          data-testid="Product-777-image"
+          src="path/to/image1.jpg"
+        />
+        <div
+          class="c6"
+        >
+          <h2
+            class="c7"
+            data-testid="Product-777-title"
+          >
+            Product 1
+          </h2>
+          <div
+            class="c8"
+            data-testid="Product-777-price"
+          >
+            Free
+          </div>
+        </div>
+      </article>
+    </a>
+  </li>
+  <li
+    class="c1"
+  >
+    <a
+      class="c2"
+      href="/product-999"
+    >
+      <article
+        class="c3"
+        data-testid="Product-999"
+      >
+        <img
+          alt="Artist name"
+          class="c4 c5"
+          data-testid="Product-999-image"
+          src="path/to/image1.jpg"
+        />
+        <div
+          class="c6"
+        >
+          <h2
+            class="c7"
+            data-testid="Product-999-title"
+          >
+            Product 2
+          </h2>
+          <div
+            class="c8"
+            data-testid="Product-999-price"
+          >
+            Free
+          </div>
+        </div>
+      </article>
+    </a>
+  </li>
+  <li
+    class="c1"
+  >
+    <a
+      class="c2"
+      href="/product-888"
+    >
+      <article
+        class="c3"
+        data-testid="Product-888"
+      >
+        <img
+          alt="Artist name"
+          class="c4 c5"
+          data-testid="Product-888-image"
+          src="path/to/image1.jpg"
+        />
+        <div
+          class="c6"
+        >
+          <h2
+            class="c7"
+            data-testid="Product-888-title"
+          >
+            Product 3
+          </h2>
+          <div
+            class="c8"
+            data-testid="Product-888-price"
+          >
+            Free
+          </div>
+        </div>
+      </article>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<ProductListingPage /> @renders with multiple ordered products: carousel 1`] = `
+.c4 {
   display: block;
   width: 100%;
   height: auto;
@@ -204,133 +389,247 @@ exports[`<ProductListingPage /> @renders with multiple ordered products 1`] = `
   font-size: 1.2rem;
 }
 
-.c0 {
-  text-align: center;
-  list-style: none;
-  margin: 0 auto;
-}
-
 .c1 {
   display: inline-block;
-  margin: 10px;
-  vertical-align: top;
+  text-align: center;
 }
 
-<div>
-    <h1>
-      Products
-    </h1>
-    <ul
-      class="c0"
+.c0 {
+  padding: 50px 0;
+}
+
+<div
+  data-testid="Products-carousel"
+>
+  <div
+    class="slider c0"
+    style="box-sizing: border-box; display: block; height: inherit; position: relative; width: 100%;"
+    tabindex="0"
+  >
+    <div
+      aria-atomic="true"
+      aria-live="polite"
+      style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"
+      tabindex="-1"
     >
-      <li
-        class="c1"
+      Slide 1 of 3
+    </div>
+    <div
+      class="slider-frame"
+      style="box-sizing: border-box; display: block; height: 100%; margin: 0px; overflow: hidden; padding: 0px; position: relative; transform: translate3d(0, 0, 0);"
+    >
+      <ul
+        class="slider-list"
+        style="box-sizing: border-box; cursor: pointer; display: block; height: 0px; margin: 0px 0px; padding: 0px; position: relative; transform: translate3d(0px, 0px, 0); width: auto; transition: 0s;"
       >
-        <a
-          href="/product-777"
+        <li
+          class="slider-slide slide-visible slide-current"
+          style="box-sizing: border-box; display: inline-block; height: auto; left: 0px; list-style-type: none; margin: auto 0px auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform .4s linear; vertical-align: top; width: 0px;"
+          tabindex="-1"
         >
-          <article
-            class="c2"
-            data-testid="Product-777"
+          <a
+            aria-hidden="false"
+            class="c1"
+            href="/product-777"
+            tabindex="0"
           >
-            <img
-              alt="Artist name"
-              class="c3 c4"
-              data-testid="Product-777-image"
-              src="path/to/image1.jpg"
-            />
-            <div
-              class="c5"
+            <article
+              class="c2"
+              data-testid="Product-777"
             >
-              <h2
-                class="c6"
-                data-testid="Product-777-title"
-              >
-                Product 1
-              </h2>
+              <img
+                alt="Artist name"
+                class="c3 c4"
+                data-testid="Product-777-image"
+                src="path/to/image1.jpg"
+              />
               <div
-                class="c7"
-                data-testid="Product-777-price"
+                class="c5"
               >
-                Free
+                <h2
+                  class="c6"
+                  data-testid="Product-777-title"
+                >
+                  Product 1
+                </h2>
+                <div
+                  class="c7"
+                  data-testid="Product-777-price"
+                >
+                  Free
+                </div>
               </div>
-            </div>
-          </article>
-        </a>
-      </li>
-      <li
-        class="c1"
+            </article>
+          </a>
+        </li>
+        <li
+          class="slider-slide slide-visible"
+          inert="true"
+          style="box-sizing: border-box; display: inline-block; height: auto; left: 0px; list-style-type: none; margin: auto 0px auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform .4s linear; vertical-align: top; width: 0px;"
+          tabindex="-1"
+        >
+          <a
+            aria-hidden="false"
+            class="c1"
+            href="/product-999"
+            tabindex="0"
+          >
+            <article
+              class="c2"
+              data-testid="Product-999"
+            >
+              <img
+                alt="Artist name"
+                class="c3 c4"
+                data-testid="Product-999-image"
+                src="path/to/image1.jpg"
+              />
+              <div
+                class="c5"
+              >
+                <h2
+                  class="c6"
+                  data-testid="Product-999-title"
+                >
+                  Product 2
+                </h2>
+                <div
+                  class="c7"
+                  data-testid="Product-999-price"
+                >
+                  Free
+                </div>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li
+          class="slider-slide"
+          inert="true"
+          style="box-sizing: border-box; display: inline-block; height: auto; left: 0px; list-style-type: none; margin: auto 0px auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform .4s linear; vertical-align: top; width: 0px;"
+          tabindex="-1"
+        >
+          <a
+            aria-hidden="true"
+            class="c1"
+            href="/product-888"
+          >
+            <article
+              class="c2"
+              data-testid="Product-888"
+            >
+              <img
+                alt="Artist name"
+                class="c3 c4"
+                data-testid="Product-888-image"
+                src="path/to/image1.jpg"
+              />
+              <div
+                class="c5"
+              >
+                <h2
+                  class="c6"
+                  data-testid="Product-888-title"
+                >
+                  Product 3
+                </h2>
+                <div
+                  class="c7"
+                  data-testid="Product-888-price"
+                >
+                  Free
+                </div>
+              </div>
+            </article>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="slider-control-centerleft"
+      style="position: absolute; top: 50%; left: 0px; transform: translateY(-50%);"
+    >
+      <button
+        aria-label="previous"
+        disabled=""
+        style="border: 0px; background: rgba(0, 0, 0, 0.4); color: white; padding: 10px; text-transform: uppercase; opacity: 0.3; cursor: not-allowed;"
+        type="button"
       >
-        <a
-          href="/product-999"
-        >
-          <article
-            class="c2"
-            data-testid="Product-999"
-          >
-            <img
-              alt="Artist name"
-              class="c3 c4"
-              data-testid="Product-999-image"
-              src="path/to/image1.jpg"
-            />
-            <div
-              class="c5"
-            >
-              <h2
-                class="c6"
-                data-testid="Product-999-title"
-              >
-                Product 2
-              </h2>
-              <div
-                class="c7"
-                data-testid="Product-999-price"
-              >
-                Free
-              </div>
-            </div>
-          </article>
-        </a>
-      </li>
-      <li
-        class="c1"
+        Prev
+      </button>
+    </div>
+    <div
+      class="slider-control-centerright"
+      style="position: absolute; top: 50%; right: 0px; transform: translateY(-50%);"
+    >
+      <button
+        aria-label="next"
+        disabled=""
+        style="border: 0px; background: rgba(0, 0, 0, 0.4); color: white; padding: 10px; text-transform: uppercase; opacity: 0.3; cursor: not-allowed;"
+        type="button"
       >
-        <a
-          href="/product-888"
+        Next
+      </button>
+    </div>
+    <div
+      class="slider-control-bottomcenter"
+      style="position: absolute; bottom: 0px; left: 50%; transform: translateX(-50%);"
+    >
+      <ul
+        style="position: relative; top: -10px; display: flex; margin: 0px; padding: 0px; list-style-type: none;"
+      >
+        <li
+          class="paging-item active"
         >
-          <article
-            class="c2"
-            data-testid="Product-888"
+          <button
+            aria-label="slide 1 bullet"
+            style="cursor: pointer; opacity: 1; background: transparent; fill: black;"
+            type="button"
           >
-            <img
-              alt="Artist name"
-              class="c3 c4"
-              data-testid="Product-888-image"
-              src="path/to/image1.jpg"
-            />
-            <div
-              class="c5"
+            <svg
+              class="paging-dot"
+              height="6"
+              width="6"
             >
-              <h2
-                class="c6"
-                data-testid="Product-888-title"
-              >
-                Product 3
-              </h2>
-              <div
-                class="c7"
-                data-testid="Product-888-price"
-              >
-                Free
-              </div>
-            </div>
-          </article>
-        </a>
-      </li>
-    </ul>
+              <circle
+                cx="3"
+                cy="3"
+                r="3"
+              />
+            </svg>
+          </button>
+        </li>
+        <li
+          class="paging-item"
+        >
+          <button
+            aria-label="slide 3 bullet"
+            style="cursor: pointer; opacity: 0.5; background: transparent; fill: black;"
+            type="button"
+          >
+            <svg
+              class="paging-dot"
+              height="6"
+              width="6"
+            >
+              <circle
+                cx="3"
+                cy="3"
+                r="3"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <style
+      type="text/css"
+    >
+      .slider-slide &gt; img { width: 100%; display: block; }
+          .slider-slide &gt; img:focus { margin: auto; }
+    </style>
   </div>
-</DocumentFragment>
+</div>
 `;
 
 exports[`<ProductListingPage /> @renders with no products 1`] = `
