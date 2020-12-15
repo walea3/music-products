@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> @renders initial route as product listings page 1`] = `
+<DocumentFragment>
+  .c0 {
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+<main
+    class="c0"
+  >
+    <div>
+      <h1>
+        Products
+      </h1>
+      <div>
+        Loading products ...
+      </div>
+      <div>
+        No products, yet.
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`<App /> @renders product route with product id 1`] = `
+<DocumentFragment>
+  .c0 {
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+<main
+    class="c0"
+  >
+    <div>
+      Loading product ...
+    </div>
+  </main>
+</DocumentFragment>
+`;

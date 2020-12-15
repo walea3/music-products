@@ -1,9 +1,19 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+
+import { renderWithRouter } from 'utils';
+
 import App from './App';
 
-test('renders app', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Products/);
-  expect(linkElement).toBeInTheDocument();
+describe('<App />', () => {
+  describe('@renders', () => {
+    test('initial route as product listings page', () => {
+      const wrapper = renderWithRouter(<App />);
+      expect(wrapper.asFragment()).toMatchSnapshot();
+    });
+
+    test('product route with product id', () => {
+      const wrapper = renderWithRouter(<App />, { route: '/product-1' });
+      expect(wrapper.asFragment()).toMatchSnapshot();
+    });
+  });
 });
