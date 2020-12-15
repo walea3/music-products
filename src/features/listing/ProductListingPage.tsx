@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import orderBy from 'lodash/orderBy';
 import Carousel from 'nuka-carousel';
 
-import { Product, useAPI, testIdProp } from 'utils';
+import { Product, parseProducts, useAPI, testIdProp } from 'utils';
 
 import { ProductItem } from './components/ProductItem';
 
@@ -18,7 +18,8 @@ export function ProductListingPage() {
   );
 
   useEffect(() => {
-    if (data.length > 0) setProducts(orderBy(data, ['feature_order', 'asc']));
+    if (data.length > 0)
+      setProducts(parseProducts(orderBy(data, ['feature_order', 'asc'])));
   }, [data]);
 
   useEffect(() => {
@@ -52,7 +53,7 @@ export function ProductListingPage() {
       ) : (
         <>
           <div {...testId('carousel')}>
-            <StyledCarousel slidesToShow={slidesCount}>
+            <StyledCarousel slidesToShow={slidesCount} initialSlideHeight={400}>
               {products.map((product) => (
                 <ProductLink to={getProductUrl(product)} key={product.id}>
                   <ProductItem {...product} />
