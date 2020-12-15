@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductListingPage /> @renders when loading 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Products
+    </h1>
+    <div>
+      Loading products ...
+    </div>
+    <div>
+      No products, yet.
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProductListingPage /> @renders with a single product 1`] = `
+<DocumentFragment>
+  .c4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-top: 5px solid;
+  border-color: #00b6b8;
+  overflow: hidden;
+  width: 90%;
+  max-width: 490px;
+  color: #08070b;
+}
+
+.c2:hover .c3 {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.c5 {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background-color: #F2F2F2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.c6 {
+  margin-top: 0;
+}
+
+.c7 {
+  display: inline-block;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #00b6b8;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.c0 {
+  text-align: center;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+}
+
+<div>
+    <h1>
+      Products
+    </h1>
+    <ul
+      class="c0"
+    >
+      <li
+        class="c1"
+      >
+        <a
+          href="/product-123"
+        >
+          <article
+            class="c2"
+            data-testid="Product-123"
+          >
+            <img
+              alt="Artist name"
+              class="c3 c4"
+              data-testid="Product-123-image"
+              src="path/to/image1.jpg"
+            />
+            <div
+              class="c5"
+            >
+              <h2
+                class="c6"
+                data-testid="Product-123-title"
+              >
+                Product title
+              </h2>
+              <div
+                class="c7"
+                data-testid="Product-123-price"
+              >
+                Free
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProductListingPage /> @renders with error 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Products
+    </h1>
+    There was problem getting you products. 
+    <button
+      data-testid="Products-tryAgain"
+    >
+      Try again.
+    </button>
+    <div>
+      No products, yet.
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProductListingPage /> @renders with multiple ordered products 1`] = `
+<DocumentFragment>
+  .c4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-top: 5px solid;
+  border-color: #00b6b8;
+  overflow: hidden;
+  width: 90%;
+  max-width: 490px;
+  color: #08070b;
+}
+
+.c2:hover .c3 {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.c5 {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background-color: #F2F2F2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.c6 {
+  margin-top: 0;
+}
+
+.c7 {
+  display: inline-block;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #00b6b8;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.c0 {
+  text-align: center;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.c1 {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: top;
+}
+
+<div>
+    <h1>
+      Products
+    </h1>
+    <ul
+      class="c0"
+    >
+      <li
+        class="c1"
+      >
+        <a
+          href="/product-777"
+        >
+          <article
+            class="c2"
+            data-testid="Product-777"
+          >
+            <img
+              alt="Artist name"
+              class="c3 c4"
+              data-testid="Product-777-image"
+              src="path/to/image1.jpg"
+            />
+            <div
+              class="c5"
+            >
+              <h2
+                class="c6"
+                data-testid="Product-777-title"
+              >
+                Product 1
+              </h2>
+              <div
+                class="c7"
+                data-testid="Product-777-price"
+              >
+                Free
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+      <li
+        class="c1"
+      >
+        <a
+          href="/product-999"
+        >
+          <article
+            class="c2"
+            data-testid="Product-999"
+          >
+            <img
+              alt="Artist name"
+              class="c3 c4"
+              data-testid="Product-999-image"
+              src="path/to/image1.jpg"
+            />
+            <div
+              class="c5"
+            >
+              <h2
+                class="c6"
+                data-testid="Product-999-title"
+              >
+                Product 2
+              </h2>
+              <div
+                class="c7"
+                data-testid="Product-999-price"
+              >
+                Free
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+      <li
+        class="c1"
+      >
+        <a
+          href="/product-888"
+        >
+          <article
+            class="c2"
+            data-testid="Product-888"
+          >
+            <img
+              alt="Artist name"
+              class="c3 c4"
+              data-testid="Product-888-image"
+              src="path/to/image1.jpg"
+            />
+            <div
+              class="c5"
+            >
+              <h2
+                class="c6"
+                data-testid="Product-888-title"
+              >
+                Product 3
+              </h2>
+              <div
+                class="c7"
+                data-testid="Product-888-price"
+              >
+                Free
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ProductListingPage /> @renders with no products 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Products
+    </h1>
+    <div>
+      No products, yet.
+    </div>
+  </div>
+</DocumentFragment>
+`;

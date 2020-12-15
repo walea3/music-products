@@ -1,5 +1,7 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import orderBy from 'lodash/orderBy';
 
 import { Product, useAPI, testIdProp } from 'utils';
 
@@ -8,9 +10,16 @@ import { ProductItem } from './components/ProductItem';
 export const getProductUrl = ({ id }: Product) => `/product-${id}`;
 
 export function ProductListingPage() {
-  const [isLoading, products = [], error, fetchProducts] = useAPI<Product[]>(
+  const [products, setProducts] = useState<Product[]>([]);
+  const [isLoading, data = [], error, fetchProducts] = useAPI<Product[]>(
     'products',
   );
+
+  useEffect(() => {
+    if (data.length > 0) setProducts(orderBy(data, ['feature_order', 'asc']));
+  }, [data]);
+
+  const testId = testIdProp('Products');
 
   return (
     <div>
@@ -19,7 +28,9 @@ export function ProductListingPage() {
       {error && (
         <>
           There was problem getting you products.{' '}
-          <button onClick={fetchProducts}>Try again.</button>
+          <button onClick={fetchProducts} {...testId('tryAgain')}>
+            Try again.
+          </button>
         </>
       )}
 
